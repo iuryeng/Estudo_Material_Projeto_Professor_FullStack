@@ -88,20 +88,23 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
 
     
     ```
-    
+ ## Exercicio de Fixacao
+ 
 <details>
-<summary>fluxo de criação do primeiro componente Angular,</summary>
+<summary>Didatica</summary>
+
+![fluxo didatico ](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/24c1a8f4-e072-4378-acdc-593dca027d9d)
+
+</details>
+
+<details>
+<summary>Algoritimo de criação do primeiro componente Angular,</summary>
 
 ![fluxo de criação do primeiro componente Angular,](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/407ab3ef-604f-493c-9178-23684f40e2eb)
 
 </details>
 
-<details>
-<summary>fluxo didatico</summary>
 
-![fluxo didatico ](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/24c1a8f4-e072-4378-acdc-593dca027d9d)
-
-</details>
 
     
 
