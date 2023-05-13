@@ -65,11 +65,15 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
     npm install -g @angular/cli
     ```
 2. **Crie um novo projeto Angular**: Use o Angular CLI para criar um novo projeto Angular com o seguinte comando:
-    ```bash
+    ```
     ng new meu-projeto
     ```
 3. **Navegue para o diretório do projeto**: Use o comando cd meu-projeto para navegar para o diretório do seu novo projeto Angular.
-4. Crie um novo componente: Use o Angular CLI para criar um novo componente com o seguinte comando:
+   ```bash
+    cd meu-projeto
+   ```
+
+5. Crie um novo componente: Use o Angular CLI para criar um novo componente com o seguinte comando:
     ```bash
     ng generate component meu-componente
     ```
@@ -88,7 +92,49 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
 
     
     ```
- ## Exercicio de Fixacao
+    
+    
+5. **Atualize o arquivo do componente**: Abra o arquivo `meu-componente.component.ts` e atualize o conteúdo para definir o comportamento do seu componente criando um método chamado exibirMensagem que retorna a mensagem.
+
+   ```ts
+    import { Component } from '@angular/core';
+
+     @Component({
+          selector: 'app-meu-componente',
+          templateUrl: './meu-componente.component.html',
+          styleUrls: ['./meu-componente.component.css']
+     })
+     export class MeuComponenteComponent {
+          mensagem: string;
+
+          constructor() {
+               this.mensagem = 'Olá, mundo!';
+          }
+
+          exibirMensagem() {
+               return this.mensagem;
+          }
+     }
+
+
+
+   ```
+
+6. **Atualize o arquivo de template do componente**: Abra o arquivo `meu-componente.component.html` e atualize o conteúdo para definir a visualização do seu componente. Por exemplo, você pode adicionar um botão que, quando clicado, exibe a mensagem definida no arquivo do componente.
+
+   ```ts
+     <button (click)="exibirMensagem()">Clique aqui</button>
+     <p>{{ mensagem }}</p>
+   ```
+
+
+7. **Inclua o componente na aplicação**: Finalmente, você precisa incluir o seu novo componente na sua aplicação. Para fazer isso, abra o arquivo `src/app/app.component.html` e adicione a tag do seu componente. A tag do seu componente será o nome do componente em kebab-case (ou seja, com hífens entre as palavras e todas as letras minúsculas). Por exemplo, se o nome do seu componente é MeuComponente, a tag do seu componente será `<app-meu-componente></app-meu-componente>`.
+   
+   ```html
+     <app-meu-componente></app-meu-componente>
+   ```
+
+## Exercicio de Fixacao
  
 <details>
 <summary>Didatica</summary>
