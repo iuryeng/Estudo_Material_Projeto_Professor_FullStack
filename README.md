@@ -54,7 +54,7 @@ Angular é uma escolha popular entre os desenvolvedores por várias razões:
 
 
 ## [Primeiro Componente Angular](#primeiro-componente-angular)
-> :bulb: **Nota:** Nesta seção, criaremos nosso primeiro componente Angular e discutiremos a importância dos componentes na arquitetura Angular.
+> :bulb: **Nota:** Nesta seção, criaremos nosso primeiro componente Angular e discutiremos a importância dos componentes na arquitetura Angular. 
 
 
 Criar o primeiro componente Angular é um passo fundamental para começar a trabalhar com essa estrutura. Aqui está um exemplo de como você pode fazer isso:
@@ -88,6 +88,21 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
 
     
     ```
+    
+<details>
+<summary>fluxo de criação do primeiro componente Angular,</summary>
+
+![fluxo de criação do primeiro componente Angular,](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/407ab3ef-604f-493c-9178-23684f40e2eb)
+
+</details>
+
+<details>
+<summary>fluxo didatico</summary>
+
+![fluxo didatico ](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/24c1a8f4-e072-4378-acdc-593dca027d9d)
+
+</details>
+
     
 
 
