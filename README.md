@@ -221,9 +221,17 @@ A propriedade @Output, por outro lado, permite que um componente filho envie dad
 
  
      ```
+<details>
+<summary>Algoritmo parar passar dados de um componente pai para um componente filho</summary>
+     
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/f7036b69-b4e2-4f7f-a8aa-2611287b563c)  
+     
+</details>
 
 
 
+
+## Exercicios
 
 <details>
 <summary>Didatica 1</summary>
