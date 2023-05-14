@@ -326,20 +326,83 @@ Aqui estão algumas das diretivas mais comuns em Angular:
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-## [Pipes Integrados e Personalizados](#pipes-integrados-e-personalizados)
+# [Pipes Integrados e Personalizados](#pipes-integrados-e-personalizados)
 > :bulb: **Nota:** Aqui, discutiremos o conceito de pipes no Angular e como eles podem ser usados para transformar a saída em nossos templates.
+
+Os Pipes no Angular são uma maneira de escrever transformações de exibição que podem ser usadas em templates HTML. Eles são úteis para formatar dados de maneira consistente em toda a sua aplicação.
+
+Existem dois tipos de pipes que você pode usar em Angular:
+
+1. **Pipes Integrados**: Angular vem com um conjunto de pipes integrados que você pode usar diretamente em seus templates. Alguns exemplos de pipes integrados são:
+
+- date: Formata uma data para uma string com base no formato local ou fornecido.
+- uppercase: Transforma o texto em letras maiúsculas.
+- lowercase: Transforma o texto em letras minúsculas.
+- currency: Transforma um número em uma string de moeda.
+- percent: Transforma um número em uma string de porcentagem.
+
+Para usar um pipe integrado, você simplesmente adiciona o pipe (|) seguido pelo nome do pipe e quaisquer argumentos necessários em seu template:
+
+```html
+<p>A data de hoje é {{ hoje | date }}</p>
+```
+
+
+2. **Pipes Personalizados**: Além dos pipes integrados, Angular também permite que você crie seus próprios pipes personalizados. Isso é útil quando você precisa de uma transformação de exibição que não é fornecida pelos pipes integrados. Para criar um pipe personalizado, você precisa criar uma classe que implementa a interface PipeTransform e fornecer uma implementação para o método transform.
+
+Para criar um pipe personalizado, você precisa definir uma classe que implementa a interface PipeTransform e fornece a lógica de transformação no método transform(). Por exemplo, aqui está um pipe personalizado que transforma um texto em uma string invertida:
+
+     ```ts
+
+     import { Pipe, PipeTransform } from '@angular/core';
+
+     @Pipe({name: 'reverseString'})
+     export class ReverseStringPipe implements PipeTransform {
+          transform(value: string): string {
+          return value.split('').reverse().join('');
+          }
+     }
+
+     ```
+
+Para usar um pipe personalizado, você precisa adicioná-lo aos declarations em seu módulo Angular e, em seguida, você pode usá-lo em seus templates da mesma maneira que os pipes integrados:
+
+     ```html
+     <p>{{ 'Olá, mundo!' | reverseString }}</p>
+
+     ```
+     
+ 
+## Exercicio de Fixacao
+     
+<details>
+<summary>Processo de criacao de pipes 1</summary>
+
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/3c1cc84c-b46e-4373-9ef1-61faed443d77)    
+     
+    
+</details>
+
+<details>
+<summary>Processo de criacao de pipes 2</summary>
+     
+ ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/1321ed86-2e83-4520-a737-eeff9b6ff8b3)
+
+</details>
+
+<details>
+<summary>Didatica</summary>
+     
+ ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/1321ed86-2e83-4520-a737-eeff9b6ff8b3)
+
+</details>
+
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/d718729e-66fc-483a-aa9a-956f666c9a4f)
+
+
+
+
+
 
 ## [@Injectable e Serviços Personalizados](#injectable-e-serviços-personalizados)
 > :bulb: **Nota:** Nesta seção, aprenderemos sobre a decoração @Injectable e como criar nossos próprios serviços no Angular.
