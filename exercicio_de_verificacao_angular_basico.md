@@ -39,11 +39,11 @@
 
 Crie um serviço "ProductService" que encapsula a lógica para obter produtos do servidor. Este serviço deve ser responsável por fazer chamadas HTTP para obter dados de produtos, bem como para adicionar, atualizar e excluir produtos.
 
-#### 11. Buscando e Modificando Dados com o Serviço Personalizado (Duração: 15 mins)
+### 11. Buscando e Modificando Dados com o Serviço Personalizado (Duração: 15 mins)
 
 Use o "ProductService" em seu componente "ProductList" para obter a lista de produtos. Quando um produto é adicionado ao carrinho, use o "CartService" para atualizar o carrinho e o "ProductService" para atualizar a quantidade disponível do produto.
 
-#### 12. Conclusão do Curso e Próximos Passos (Duração: 15 mins)
+### 12. Conclusão do Curso e Próximos Passos (Duração: 15 mins)
 
 Revise todos os conceitos aprendidos e como eles foram aplicados no projeto da loja de impressoras 3D. Identifique áreas para melhorias ou expansão futura, como adicionar autenticação de usuário, permitir avaliações de produtos, ou expandir a loja para incluir outros tipos de produtos relacionados à impressão 3D.
 
