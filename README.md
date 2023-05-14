@@ -303,19 +303,31 @@ Aqui estão algumas das diretivas mais comuns em Angular:
 
 ## Exercicio de Fixacao
 
+
 <details>
 <summary>Didatica 1</summary>
-     
-     ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/410ebc9d-dd9c-4ae1-bd73-62464ef5f2c1)
+
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/410ebc9d-dd9c-4ae1-bd73-62464ef5f2c1)
      
 </details>
 
 <details>
 <summary>Didatica 2</summary>
      
-     ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/61a16937-ed69-4f90-949a-5d4f241ba534)
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/61a16937-ed69-4f90-949a-5d4f241ba534)
      
 </details>
+
+<details>
+<summary>Didatica 3</summary>
+     
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/b081b3d7-8eac-4ace-b397-ce0ab1695bf0)
+     
+</details>
+
+
+
+
 
 
 
