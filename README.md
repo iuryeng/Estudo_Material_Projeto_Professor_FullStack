@@ -1,7 +1,6 @@
 
 # Curso de Angular para iniciantes
 
-
 Bem-vindo ao mundo do Angular, uma poderosa plataforma de desenvolvimento web criada pelo Google. Angular é uma estrutura de JavaScript de código aberto que é usada para construir aplicações web de página única. Com o Angular, você pode criar aplicações web eficientes, sofisticadas e escaláveis.
 
 
@@ -50,9 +49,6 @@ Angular é uma escolha popular entre os desenvolvedores por várias razões:
 7. **Compatibilidade com Plataformas Múltiplas**: Angular permite que você desenvolva aplicações para várias plataformas, incluindo web, mobile e desktop.
 
 
-
-
-
 ## [Primeiro Componente Angular](#primeiro-componente-angular)
 > :bulb: **Nota:** Nesta seção, criaremos nosso primeiro componente Angular e discutiremos a importância dos componentes na arquitetura Angular. 
 
@@ -88,9 +84,7 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
             ├── meu-componente.component.ts
             ├── meu-componente.component.html
             ├── meu-componente.component.css
-            └── meu-componente.component.spec.ts
-
-    
+            └── meu-componente.component.spec.ts    
     ```
     
     
@@ -115,9 +109,6 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
                return this.mensagem;
           }
      }
-
-
-
    ```
 
 6. **Atualize o arquivo de template do componente**: Abra o arquivo `meu-componente.component.html` e atualize o conteúdo para definir a visualização do seu componente. Por exemplo, você pode adicionar um botão que, quando clicado, exibe a mensagem definida no arquivo do componente.
@@ -148,37 +139,134 @@ Criar o primeiro componente Angular é um passo fundamental para começar a trab
 
 ![fluxo de criação do primeiro componente Angular,](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/407ab3ef-604f-493c-9178-23684f40e2eb)
 
+</details> 
+
+
+## [@Input e @Output](#input-e-output)
+> :bulb: **Nota:** Aqui, aprenderemos sobre as propriedades @Input e @Output e como elas facilitam a comunicação entre componentes.
+
+No Angular, a comunicação entre componentes é um aspecto fundamental para criar aplicações interativas. Dois dos principais mecanismos para essa comunicação são as propriedades @Input e @Output.
+
+### @Input
+
+A propriedade @Input permite que você passe dados de um componente pai para um componente filho. Por exemplo, se você tem um componente que exibe uma mensagem e você quer que essa mensagem seja personalizável, você pode usar @Input para passar a mensagem do componente pai para o componente filho.
+
+#### Exemplos de como usar @Input
+
+1. **Defina a propriedade @Input no componente filho**: No arquivo do componente filho (por exemplo, filho.component.ts), defina a propriedade @Input. 
+
+     ```ts
+     import { Component, Input } from '@angular/core';
+
+     @Component({
+          selector: 'app-filho',
+          template: `<p>{{ mensagem }}</p>`,
+     })
+     export class FilhoComponent {
+          @Input() mensagem: string;
+     }
+     ```
+
+2. **Passe dados para a propriedade @Input no template do componente pai**: No template do componente pai (por exemplo, pai.component.html), passe dados para a propriedade @Input do componente filho:
+
+     ```ts
+     <app-filho [mensagem]="'Olá, mundo!'"></app-filho>
+     ```
+
+### @Output
+
+A propriedade @Output, por outro lado, permite que um componente filho envie dados de volta para um componente pai. Isso é útil quando você tem um componente filho que precisa notificar o componente pai de alguma ação, como um botão sendo clicado. @Output é normalmente usado em conjunto com EventEmitters para emitir eventos personalizados.
+
+#### Exemplos de como usar @Output
+
+1. **Defina o evento @Output no componente filho**: No arquivo do componente filho (por exemplo, filho.component.ts), defina o evento @Output:
+
+     ```ts
+     import { Component, Output, EventEmitter } from '@angular/core';
+
+     @Component({
+          selector: 'app-filho',
+          template: `<button (click)="enviarEvento()">Clique em mim</button>`,
+     })
+     export class FilhoComponent {
+          @Output() evento = new EventEmitter<string>();
+
+          enviarEvento() {
+               this.evento.emit('Olá, mundo!');
+          }
+     }
+
+     ```
+     
+2. **Escute o evento @Output no template do componente pai**: No template do componente pai (por exemplo, pai.component.html), escute o evento @Output do componente filho:
+
+     ```ts
+     <app-filho (evento)="tratarEvento($event)"></app-filho>
+     ```
+
+3. **Trate o evento @Output no componente pai**: No arquivo do componente pai (por exemplo, pai.component.ts), trate o evento @Output do componente filho:
+
+      ```ts
+      import { Component } from '@angular/core';
+
+     @Component({
+          selector: 'app-pai',
+          template: `<app-filho (evento)="tratarEvento($event)"></app-filho>`,
+     })
+     export class PaiComponent {
+          tratarEvento(mensagem: string) {
+          console.log(mensagem);
+        }
+     }
+
+ 
+     ```
+
+
+
+
+<details>
+<summary>Didatica 1</summary>
+     
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/73a7a8e1-92e5-49f6-a9d2-2f85b1b6852d)
+     
+</details>
+
+
+<details>
+<summary>Didatica 2</summary>
+
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/8e578b96-8439-451c-9809-fac606f67e4e)     
+
+
 </details>
 
 
 
-    
 
 
 
-## [@Input e @Output](#input-e-output)
-Aqui, aprenderemos sobre as propriedades @Input e @Output e como elas facilitam a comunicação entre componentes.
 
 ## [Diretivas: ngFor, ngIf, ngClass, ngStyle, ngSwitch](#diretivas-ngfor-ngif-ngclass-ngstyle-ngswitch)
-Nesta seção, exploraremos algumas das diretivas mais comuns no Angular e como elas podem ser usadas para manipular o DOM.
+> :bulb: **Nota:** Nesta seção, exploraremos algumas das diretivas mais comuns no Angular e como elas podem ser usadas para manipular o DOM.
 
 ## [Pipes Integrados e Personalizados](#pipes-integrados-e-personalizados)
-Aqui, discutiremos o conceito de pipes no Angular e como eles podem ser usados para transformar a saída em nossos templates.
+> :bulb: **Nota:** Aqui, discutiremos o conceito de pipes no Angular e como eles podem ser usados para transformar a saída em nossos templates.
 
 ## [@Injectable e Serviços Personalizados](#injectable-e-serviços-personalizados)
-Nesta seção, aprenderemos sobre a decoração @Injectable e como criar nossos próprios serviços no Angular.
+> :bulb: **Nota:** Nesta seção, aprenderemos sobre a decoração @Injectable e como criar nossos próprios serviços no Angular.
 
 ## [Cliente HTTP - GET, POST, PUT, DELETE](#cliente-http---get-post-put-delete)
-Aqui, exploraremos o cliente HTTP do Angular e como ele pode ser usado para fazer solicitações GET, POST, PUT e DELETE.
+> :bulb: **Nota:** Aqui, exploraremos o cliente HTTP do Angular e como ele pode ser usado para fazer solicitações GET, POST, PUT e DELETE.
 
 ## [Pipe Async](#pipe-async)
-Nesta seção, discutiremos o pipe async e como ele pode ser usado para lidar com operações assíncronas no Angular.
+> :bulb: **Nota:** Nesta seção, discutiremos o pipe async e como ele pode ser usado para lidar com operações assíncronas no Angular.
 
 ## [Construindo Serviços Personalizados](#construindo-serviços-personalizados)
-Aqui, aprenderemos como construir nossos próprios serviços no Angular e como eles podem ser usados para encapsular a lógica de negócios.
+> :bulb: **Nota:** Aqui, aprenderemos como construir nossos próprios serviços no Angular e como eles podem ser usados para encapsular a lógica de negócios.
 
 ## [Buscando e Modificando Dados com Serviço Personalizado](#buscando-e-modificando-dados-com-serviço-personalizado)
-Nesta seção, discutiremos como podemos usar nossos serviços personalizados para buscar e modificar dados.
+> :bulb: **Nota:** Nesta seção, discutiremos como podemos usar nossos serviços personalizados para buscar e modificar dados.
 
 ## [Conclusão do Curso e Próximos Passos](#conclusão-do-curso-e-próximos-passos)
-Finalmente, concluiremos o curso e discutiremos os próximos passos para continuar aprendendo e melhorando suas habilidades no Angular.
+> :bulb: **Nota:** Finalmente, concluiremos o curso e discutiremos os próximos passos para continuar aprendendo e melhorando suas habilidades no Angular.
