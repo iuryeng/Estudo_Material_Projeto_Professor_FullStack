@@ -172,6 +172,17 @@ A propriedade @Input permite que você passe dados de um componente pai para um 
      ```ts
      <app-filho [mensagem]="'Olá, mundo!'"></app-filho>
      ```
+     
+     
+<details>
+<summary>Algoritmo parar passar dados de um componente filho para um componente pai</summary>
+     
+![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/d1eb4ac9-ed7c-4c73-8994-6aa71b468840)
+     
+</details>
+     
+
+
 
 ### @Output
 
@@ -228,10 +239,7 @@ A propriedade @Output, por outro lado, permite que um componente filho envie dad
      
 </details>
 
-
-
-
-## Exercicios
+## Exercicio de Fixacao
 
 <details>
 <summary>Didatica 1</summary>
