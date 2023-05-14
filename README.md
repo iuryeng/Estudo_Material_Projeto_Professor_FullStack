@@ -180,8 +180,6 @@ A propriedade @Input permite que você passe dados de um componente pai para um 
 ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/d1eb4ac9-ed7c-4c73-8994-6aa71b468840)
      
 </details>
-     
-
 
 
 ### @Output
@@ -258,13 +256,75 @@ A propriedade @Output, por outro lado, permite que um componente filho envie dad
 </details>
 
 
-
-
-
-
-
 ## [Diretivas: ngFor, ngIf, ngClass, ngStyle, ngSwitch](#diretivas-ngfor-ngif-ngclass-ngstyle-ngswitch)
 > :bulb: **Nota:** Nesta seção, exploraremos algumas das diretivas mais comuns no Angular e como elas podem ser usadas para manipular o DOM.
+
+As diretivas em Angular são usadas para manipular o DOM (Document Object Model) e podem ser consideradas como instruções especiais que dizem ao template HTML o que fazer. 
+
+Aqui estão algumas das diretivas mais comuns em Angular:
+
+1. **ngFor**: Esta é uma diretiva estrutural que é usada para renderizar uma lista de elementos. Por exemplo, você pode usar ngFor para exibir uma lista de nomes em uma lista HTML.
+
+2. **ngIf**: Esta é outra diretiva estrutural que é usada para adicionar ou remover um elemento do DOM com base em uma condição. Por exemplo, você pode usar ngIf para exibir uma mensagem de erro apenas se um formulário for inválido.
+
+3. **ngClass**: Esta é uma diretiva de atributo que é usada para adicionar ou remover classes CSS de um elemento com base em uma expressão. Por exemplo, você pode usar ngClass para adicionar uma classe de erro a um campo de formulário se ele for inválido.
+
+4. **ngStyle**: Esta é outra diretiva de atributo que é usada para adicionar ou remover estilos CSS de um elemento com base em uma expressão. Por exemplo, você pode usar ngStyle para alterar a cor de fundo de um elemento com base em uma condição.
+
+5. **ngSwitch**: Esta é uma diretiva estrutural que é usada para adicionar ou remover um grupo de elementos do DOM com base em uma expressão. Por exemplo, você pode usar ngSwitch para exibir diferentes elementos com base no valor de uma variável.
+
+#### Exemplos
+
+```ts
+<div *ngFor="let nome of nomes">
+  <p>{{ nome }}</p>
+</div>
+
+<div *ngIf="formInvalido">
+  <p>Formulário inválido!</p>
+</div>
+
+<div [ngClass]="{'classe-erro': formInvalido}">
+  <p>Este campo é obrigatório</p>
+</div>
+
+<div [ngStyle]="{'background-color': corDeFundo}">
+  <p>Texto com fundo colorido</p>
+</div>
+
+<div [ngSwitch]="valor">
+  <p *ngSwitchCase="'valor1'">Valor 1</p>
+  <p *ngSwitchCase="'valor2'">Valor 2</p>
+  <p *ngSwitchDefault>Valor padrão</p>
+</div>
+```
+
+💡 Lembre-se de que as diretivas estruturais são sempre prefixadas com um asterisco (*), enquanto as diretivas de atributo não são.
+
+## Exercicio de Fixacao
+
+<details>
+<summary>Didatica 1</summary>
+     
+     ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/410ebc9d-dd9c-4ae1-bd73-62464ef5f2c1)
+     
+</details>
+
+<details>
+<summary>Didatica 2</summary>
+     
+     ![image](https://github.com/iuryeng/Estudo_Material_Projeto_Professor_FullStack/assets/38250160/61a16937-ed69-4f90-949a-5d4f241ba534)
+     
+</details>
+
+
+
+
+
+
+
+
+
 
 ## [Pipes Integrados e Personalizados](#pipes-integrados-e-personalizados)
 > :bulb: **Nota:** Aqui, discutiremos o conceito de pipes no Angular e como eles podem ser usados para transformar a saída em nossos templates.
